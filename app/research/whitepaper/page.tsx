@@ -4,6 +4,14 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import Script from 'next/script';
 
+declare global {
+  interface Window {
+    hljs?: {
+      highlightAll: () => void;
+    };
+  }
+}
+
 export default function WhitepaperPage() {
   useEffect(() => {
     const toggle = document.getElementById('themeToggle');
