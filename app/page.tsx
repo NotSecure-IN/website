@@ -1,65 +1,123 @@
-import Image from "next/image";
+// app/page.tsx
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Security Testing, Built for the Way You Build',
+  description:
+    'NotSecure makes application security testing simple, automated, and accessible. Run APTE-powered VAPT on demand through a single platform.',
+  alternates: {
+    canonical: 'https://notsecure.in',
+  },
+};
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <>
+      {/* Hero Section */}
+      <section className="hero">
+        <div className="hero-bg"></div>
+        <div className="container hero-inner">
+          <div className="hero-text">
+            <h1 className="hero-title">
+              Security testing, <span className="gradient-text">built for the way you build.</span>
+            </h1>
+            <p className="hero-subtitle">
+              NotSecure makes application security testing simple, automated, and accessible.
+              Run APTE-powered VAPT on demand through a single platform — without the
+              complexity of traditional security testing.
+            </p>
+            <div className="hero-buttons">
+              <a
+                href="https://dashboard.notsecure.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                Start Testing
+              </a>
+              <a href="/product" className="btn-secondary">
+                Explore APTE
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Highlights */}
+      <section className="features-section">
+        <div className="container">
+          <h2 className="section-title">Why NotSecure?</h2>
+          <div className="features-grid">
+            <div className="feature-card">
+              <i className="bi bi-clock-history"></i>
+              <h3>On-Demand</h3>
+              <p>Run security tests whenever you need them, without waiting for manual engagements.</p>
+            </div>
+            <div className="feature-card">
+              <i className="bi bi-credit-card"></i>
+              <h3>Credit-Based</h3>
+              <p>Purchase credits and use them exactly when you need — no long-term contracts or complex pricing.</p>
+            </div>
+            <div className="feature-card">
+              <i className="bi bi-clipboard-check"></i>
+              <h3>Actionable Results</h3>
+              <p>Findings that are clear, evidence-driven, and designed to help you fix issues quickly.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Product Showcase */}
+      <section className="product-showcase">
+        <div className="container showcase-inner">
+          <div className="showcase-text">
+            <h2>Meet APTE</h2>
+            <p>
+              The engine behind automated VAPT. APTE powers NotSecure's automated security
+              testing platform — built around structured analysis, testing, verification, and
+              actionable findings.
+            </p>
+            <a href="/product" className="btn-primary">
+              Learn More
+            </a>
+          </div>
+          <div className="showcase-visual">
+            <div className="abstract-shape"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Overview */}
+      <section className="services-overview">
+        <div className="container">
+          <h2 className="section-title">What We Offer</h2>
+          <div className="services-grid">
+            <div className="service-item">
+              <i className="bi bi-shield-check"></i>
+              <h3>Automated VAPT</h3>
+            </div>
+            <div className="service-item">
+              <i className="bi bi-mortarboard"></i>
+              <h3>Cybersecurity Training</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Teaser */}
+      <section className="about-teaser">
+        <div className="container">
+          <h2>Building a simpler way to approach cybersecurity.</h2>
+          <p>
+            NotSecure is a cybersecurity technology company focused on accessible,
+            product-led security solutions.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+          <a href="/about" className="btn-secondary">
+            About Us
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }

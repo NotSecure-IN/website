@@ -1,0 +1,241 @@
+/* components/Navbar.module.css */
+.topBar {
+  background-color: #1e293b;
+  padding: 2px 0;
+  font-size: 0.85rem;
+  color: #f8fafc;
+}
+
+.topBar a {
+  color: #f8fafc;
+  text-decoration: none;
+  margin-right: 20px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topBar a:hover {
+  opacity: 1;
+  color: #f59e0b;
+}
+
+.topBar .socialLinks a {
+  margin-left: 15px;
+  font-size: 1rem;
+}
+
+.topBar .socialLinks a:hover {
+  color: #f59e0b;
+  transform: translateY(-2px);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mainNavbar {
+  background-color: #ffffff;
+  padding: 0;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05), 0 2px 4px -1px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+}
+
+.brand {
+  position: relative;
+  font-weight: 800;
+  font-size: 1.8rem;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg,
+    #bd6424 0%, 
+    #f96a32 25%, 
+    #bf25a7 50%, 
+    #c41d83 75%, 
+    #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  text-shadow: 0 2px 10px rgba(37, 99, 235, 0.2);
+  animation: gradientFlow 8s ease infinite;
+  display: inline-block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+}
+
+.brand::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    rgba(37, 99, 235, 0.8),
+    rgba(16, 185, 129, 0.8),
+    rgba(245, 158, 11, 0.8));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.brand:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0 12px;
+}
+
+.navLink {
+  color: #1e293b;
+  font-weight: 500;
+  padding: 20px 0;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.navLink:hover {
+  color: #2563eb;
+}
+
+/* Active link style (optional) */
+.navLink.active {
+  font-weight: 600;
+  color: #2563eb;
+}
+.navLink.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  border-radius: 3px 3px 0 0;
+}
+
+.toggler {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.togglerIcon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: #1e293b;
+  position: relative;
+  transition: all 0.3s;
+}
+.togglerIcon::before,
+.togglerIcon::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #1e293b;
+  left: 0;
+  transition: all 0.3s;
+}
+.togglerIcon::before {
+  top: -8px;
+}
+.togglerIcon::after {
+  top: 8px;
+}
+
+.collapse {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+  100% { background-position: 0% center; }
+}
+
+@keyframes cyberPulse {
+  0%, 100% {
+    text-shadow: 
+      0 0 0 rgba(59, 130, 246, 0),
+      0 0 0 rgba(52, 211, 153, 0),
+      0 0 0 rgba(245, 158, 11, 0);
+  }
+  50% {
+    text-shadow: 
+      0 0 8px rgba(59, 130, 246, 0.6),
+      0 0 12px rgba(52, 211, 153, 0.4),
+      0 0 16px rgba(245, 158, 11, 0.2);
+  }
+}
+
+@media (max-width: 992px) {
+  .navList {
+    flex-direction: column;
+    padding: 15px 0;
+  }
+  .navItem {
+    margin: 0;
+  }
+  .navLink {
+    padding: 12px 0;
+  }
+  .navLink.active::after {
+    display: none;
+  }
+  .toggler {
+    display: block;
+  }
+  .collapse {
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  .collapse.show {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand {
+    font-size: 1.5rem;
+  }
+  .container {
+    flex-wrap: wrap;
+  }
+  .topBar .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
