@@ -85,13 +85,13 @@ export default function RootLayout({
               </a>
             </div>
             <div className="social-links">
-              <a href="https://www.linkedin.com/company/not-secure/" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/notsecure/" aria-label="LinkedIn">
                 <i className="bi bi-linkedin"></i>
               </a>
               <a href="https://www.facebook.com/notsec/" aria-label="Facebook">
                 <i className="bi bi-facebook"></i>
               </a>
-              <a href="https://www.instagram.com/notsecure_in/" aria-label="Instagram">
+              <a href="https://www.instagram.com/notsecure.in/" aria-label="Instagram">
                 <i className="bi bi-instagram"></i>
               </a>
             </div>
@@ -155,9 +155,9 @@ export default function RootLayout({
                 <i className="bi bi-envelope"></i> support@notsecure.in
               </address>
               <div className="social-icons">
-                <a href="https://www.linkedin.com/company/not-secure/" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
+                <a href="https://www.linkedin.com/company/notsecure/" aria-label="LinkedIn"><i className="bi bi-linkedin"></i></a>
                 <a href="https://www.facebook.com/notsec/" aria-label="Facebook"><i className="bi bi-facebook"></i></a>
-                <a href="https://www.instagram.com/notsecure_in/" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
+                <a href="https://www.instagram.com/notsecure.in/" aria-label="Instagram"><i className="bi bi-instagram"></i></a>
               </div>
             </div>
           </div>
