@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Vulnerability Disclosure Program',
   description:
-    'Responsible disclosure program for NotSecure. Report vulnerabilities to support@notsecure.in and get recognized.',
+    'Responsible disclosure program for NotSecure. Report vulnerabilities to https://forms.gle/QFcyZEBMmVeq6XFK6 and get recognized.',
   alternates: {
     canonical: 'https://notsecure.in/vdp',
   },
