@@ -89,8 +89,8 @@ export default function VdpPage() {
           </p>
           <div className="vdp-report-method">
             <i className="bi bi-envelope-fill"></i>
-            <a href="mailto:support@notsecure.in" className="vdp-email">
-              support@notsecure.in
+            <a href="https://forms.gle/QFcyZEBMmVeq6XFK6" className="vdp-email">
+              https://forms.gle/QFcyZEBMmVeq6XFK6
             </a>
           </div>
 
